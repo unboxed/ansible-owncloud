@@ -24,7 +24,3 @@
 
 - name: Install ownCloud
   apt: name=owncloud state=present force=yes
-
-- name: Adjust Apache docroot
-  replace: dest=/etc/apache2/sites-enabled/000-default.conf regexp='DocumentRoot /var/www/html' replace='DocumentRoot /var/www/owncloud'
-  notify: reload apache
