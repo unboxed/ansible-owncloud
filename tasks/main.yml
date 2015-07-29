@@ -24,3 +24,6 @@
 
 - name: Install ownCloud
   apt: name=owncloud state=present force=yes
+
+- include: configure_owncloud.yml
+  tags: owncloud
